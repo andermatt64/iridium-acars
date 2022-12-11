@@ -19,4 +19,4 @@ COPY ./Dockerfiles/airspy.conf /root/airspy.conf
 COPY ./Dockerfiles/iridium.conf /etc/supervisor/conf.d/iridium.conf
 COPY ./Dockerfiles/entrypoint.sh /
 
-ENTRYPOINT [ "/entrypoints.sh" ]
+ENTRYPOINT [ "/entrypoint.sh" ]
