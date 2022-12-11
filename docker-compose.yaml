@@ -1,0 +1,9 @@
+version: "2.2"
+
+services:
+  iridium-acars:
+    container_name: iridium-acars
+    restart: unless-stopped
+    image: ${DOCKER_USERNAME}/iridium-acars:latest
+    devices:
+      - "/dev/bus/usb"
