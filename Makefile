@@ -8,3 +8,10 @@ build:
 push:
 	docker push ${DOCKER_USERNAME}/${CONTAINER_NAME}:${GIT_HASH}
 
+release:
+	docker pull ${DOCKER_USERNAME}/${CONTAINER_NAME}:${GIT_HASH}
+	docker tag  ${DOCKER_USERNAME}/${CONTAINER_NAME}:${GIT_HASH} ${DOCKER_USERNAME}/${CONTAINER_NAME}:latest
+	docker push ${DOCKER_USERNAME}/${CONTAINER_NAME}:latest
+
+clean:
+	-docker rmi ${DOCKER_USERNAME}/${CONTAINER_NAME}:${GIT_HASH}
