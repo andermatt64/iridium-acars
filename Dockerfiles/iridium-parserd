@@ -1,3 +1,0 @@
-#!/bin/bash
-
-exec iridium-extractor -D 4 /root/airspy.conf | python3 /root/iridium-toolkit/iridium-parser.py -o zmq
