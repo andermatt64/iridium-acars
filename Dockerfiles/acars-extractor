@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python3 /root/iridium-toolkit/reassembler.py -m acars -a json zmq:
+exec python3 /root/iridium-toolkit/reassembler.py -m acars -a json zmq:
